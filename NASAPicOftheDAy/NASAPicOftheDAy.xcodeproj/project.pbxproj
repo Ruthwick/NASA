@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ECABA17A27B8054F00B4BCFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA17927B8054F00B4BCFD /* AppDelegate.swift */; };
+		ECABA17E27B8054F00B4BCFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA17D27B8054F00B4BCFD /* ViewController.swift */; };
+		ECABA18127B8054F00B4BCFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECABA17F27B8054F00B4BCFD /* Main.storyboard */; };
+		ECABA18327B8055100B4BCFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECABA18227B8055100B4BCFD /* Assets.xcassets */; };
+		ECABA18627B8055100B4BCFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECABA18427B8055100B4BCFD /* LaunchScreen.storyboard */; };
+		ECABA19227B8079200B4BCFD /* PicOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA19127B8079200B4BCFD /* PicOfTheDay.swift */; };
+		ECABA19527B80D9400B4BCFD /* NASAAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA19427B80D9400B4BCFD /* NASAAPIClient.swift */; };
+		ECABA19A27B80F4C00B4BCFD /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA19927B80F4C00B4BCFD /* UIViewController+Extension.swift */; };
+		ECABA19F27B8121300B4BCFD /* PicOfTheDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA19D27B8121300B4BCFD /* PicOfTheDayCell.swift */; };
+		ECABA1A027B8121300B4BCFD /* PicOfTheDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECABA19E27B8121300B4BCFD /* PicOfTheDayCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ECABA17627B8054F00B4BCFD /* NASAPicOftheDAy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASAPicOftheDAy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECABA17927B8054F00B4BCFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ECABA17D27B8054F00B4BCFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ECABA18027B8054F00B4BCFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECABA18227B8055100B4BCFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECABA18527B8055100B4BCFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ECABA18727B8055100B4BCFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECABA19127B8079200B4BCFD /* PicOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfTheDay.swift; sourceTree = "<group>"; };
+		ECABA19427B80D9400B4BCFD /* NASAAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAAPIClient.swift; sourceTree = "<group>"; };
+		ECABA19927B80F4C00B4BCFD /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		ECABA19D27B8121300B4BCFD /* PicOfTheDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfTheDayCell.swift; sourceTree = "<group>"; };
+		ECABA19E27B8121300B4BCFD /* PicOfTheDayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicOfTheDayCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECABA17327B8054F00B4BCFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECABA16D27B8054F00B4BCFD = {
+			isa = PBXGroup;
+			children = (
+				ECABA17827B8054F00B4BCFD /* NASAPicOftheDAy */,
+				ECABA17727B8054F00B4BCFD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECABA17727B8054F00B4BCFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECABA17627B8054F00B4BCFD /* NASAPicOftheDAy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECABA17827B8054F00B4BCFD /* NASAPicOftheDAy */ = {
+			isa = PBXGroup;
+			children = (
+				ECABA19B27B8118900B4BCFD /* API */,
+				ECABA18E27B805A900B4BCFD /* Assets and other files */,
+				ECABA19827B80F2F00B4BCFD /* Helpers */,
+				ECABA18D27B8059300B4BCFD /* Model */,
+				ECABA19327B80B5100B4BCFD /* StoryBoard */,
+				ECABA19027B805D500B4BCFD /* ViewControllers */,
+			);
+			path = NASAPicOftheDAy;
+			sourceTree = "<group>";
+		};
+		ECABA18D27B8059300B4BCFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECABA19127B8079200B4BCFD /* PicOfTheDay.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECABA18E27B805A900B4BCFD /* Assets and other files */ = {
+			isa = PBXGroup;
+			children = (
+				ECABA18F27B805BC00B4BCFD /* Assetsa and plist */,
+				ECABA18427B8055100B4BCFD /* LaunchScreen.storyboard */,
+			);
+			path = "Assets and other files";
+			sourceTree = "<group>";
+		};
+		ECABA18F27B805BC00B4BCFD /* Assetsa and plist */ = {
+			isa = PBXGroup;
+			children = (
+				ECABA18227B8055100B4BCFD /* Assets.xcassets */,
+				ECABA18727B8055100B4BCFD /* Info.plist */,
+			);
+			path = "Assetsa and plist";
+			sourceTree = "<group>";
+		};
+		ECABA19027B805D500B4BCFD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ECABA19C27B811F400B4BCFD /* TableViewCell */,
+				ECABA17927B8054F00B4BCFD /* AppDelegate.swift */,
+				ECABA17D27B8054F00B4BCFD /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		ECABA19327B80B5100B4BCFD /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				ECABA17F27B8054F00B4BCFD /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		ECABA19827B80F2F00B4BCFD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ECABA19927B80F4C00B4BCFD /* UIViewController+Extension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		ECABA19B27B8118900B4BCFD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				ECABA19427B80D9400B4BCFD /* NASAAPIClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		ECABA19C27B811F400B4BCFD /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				ECABA19D27B8121300B4BCFD /* PicOfTheDayCell.swift */,
+				ECABA19E27B8121300B4BCFD /* PicOfTheDayCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECABA17527B8054F00B4BCFD /* NASAPicOftheDAy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECABA18A27B8055100B4BCFD /* Build configuration list for PBXNativeTarget "NASAPicOftheDAy" */;
+			buildPhases = (
+				ECABA17227B8054F00B4BCFD /* Sources */,
+				ECABA17327B8054F00B4BCFD /* Frameworks */,
+				ECABA17427B8054F00B4BCFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NASAPicOftheDAy;
+			productName = NASAPicOftheDAy;
+			productReference = ECABA17627B8054F00B4BCFD /* NASAPicOftheDAy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECABA16E27B8054F00B4BCFD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					ECABA17527B8054F00B4BCFD = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = ECABA17127B8054F00B4BCFD /* Build configuration list for PBXProject "NASAPicOftheDAy" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECABA16D27B8054F00B4BCFD;
+			productRefGroup = ECABA17727B8054F00B4BCFD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECABA17527B8054F00B4BCFD /* NASAPicOftheDAy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECABA17427B8054F00B4BCFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECABA1A027B8121300B4BCFD /* PicOfTheDayCell.xib in Resources */,
+				ECABA18627B8055100B4BCFD /* LaunchScreen.storyboard in Resources */,
+				ECABA18327B8055100B4BCFD /* Assets.xcassets in Resources */,
+				ECABA18127B8054F00B4BCFD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECABA17227B8054F00B4BCFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECABA19227B8079200B4BCFD /* PicOfTheDay.swift in Sources */,
+				ECABA17E27B8054F00B4BCFD /* ViewController.swift in Sources */,
+				ECABA19527B80D9400B4BCFD /* NASAAPIClient.swift in Sources */,
+				ECABA19A27B80F4C00B4BCFD /* UIViewController+Extension.swift in Sources */,
+				ECABA19F27B8121300B4BCFD /* PicOfTheDayCell.swift in Sources */,
+				ECABA17A27B8054F00B4BCFD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ECABA17F27B8054F00B4BCFD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECABA18027B8054F00B4BCFD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ECABA18427B8055100B4BCFD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECABA18527B8055100B4BCFD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ECABA18827B8055100B4BCFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ECABA18927B8055100B4BCFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECABA18B27B8055100B4BCFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NASAPicOftheDAy/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GS.NASAPicOftheDAy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		ECABA18C27B8055100B4BCFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NASAPicOftheDAy/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GS.NASAPicOftheDAy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECABA17127B8054F00B4BCFD /* Build configuration list for PBXProject "NASAPicOftheDAy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECABA18827B8055100B4BCFD /* Debug */,
+				ECABA18927B8055100B4BCFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECABA18A27B8055100B4BCFD /* Build configuration list for PBXNativeTarget "NASAPicOftheDAy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECABA18B27B8055100B4BCFD /* Debug */,
+				ECABA18C27B8055100B4BCFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECABA16E27B8054F00B4BCFD /* Project object */;
+}
