@@ -11,6 +11,8 @@ class ViewController: UIViewController {
     @IBOutlet var picOfTheDayView: UITableView!
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var pickerView: UIView!
+    @IBOutlet var retryBtn: UIButton!
+    
     
     var picOfTheDayDetails : PicOfTheDay?
     let loader = LoadingView()
@@ -19,19 +21,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.loader.add(withText: "Loading...", into: self.view)
         self.setupView()
         let today = Date().string(format: "YYYY-MM-dd")
         self.getPicOfTheDay(today)
     }
     
     func getPicOfTheDay(_ date:String){
-        
+        self.loader.add(withText: "Loading...", into: self.view)
+        self.retryBtn.isHidden = true
         NASAAPIClient.getDataFromAPI(at: date) { (response) in
             guard let imageUrl = response["url"] else {
                 print ("Error getting image url")
+                DispatchQueue.main.async {
                 self.loader.dismissLoadingView()
                 self.showAlert(title: "Error", message: "Something went wrong please try again later!", style: .alert)
+                    self.retryBtn.isHidden = false
+                }
                 return
             }
             
@@ -48,8 +53,11 @@ class ViewController: UIViewController {
                     
                 } else {
                     print ("Error getting image")
+                    DispatchQueue.main.async {
                     self.loader.dismissLoadingView()
                     self.showAlert(title: "Error", message: "Something went wrong please try again later!", style: .alert)
+                        self.retryBtn.isHidden = false
+                    }
                 }
             })
         }
@@ -59,7 +67,6 @@ class ViewController: UIViewController {
     @IBAction func doneTapped(_ sender: UIButton) {
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY-MM-dd"
-        self.loader.add(withText: "Loading...", into: self.view)
         self.getPicOfTheDay(datePicker.date.string(format: "YYYY-MM-dd"))
         self.pickerView.isHidden = true
     }
@@ -67,4 +74,11 @@ class ViewController: UIViewController {
     @IBAction func cancelTapped(_ sender: UIButton) {
         self.pickerView.isHidden = true
     }
+    
+    @IBAction func retryClicked(_ sender: UIButton) {
+        let today = Date().string(format: "YYYY-MM-dd")
+        self.getPicOfTheDay(today)
+    }
+    
+    
 }

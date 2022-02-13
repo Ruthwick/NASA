@@ -14,19 +14,17 @@ class NASAAPIClient {
     
     // Call this API to get data
     static func getDataFromAPI(at date: String, completion: @escaping (JSON) -> ()) {
-        let urlString = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=\(date)"
+        let urlString = "https://api.nasa.gov/planetary/apod?api_key=oVzWO0EjdNLWPocLIekkhqSyc3OLaiZh3ichwyWU&date=\(date)"
         let url = URL(string: urlString)
         guard let unwrappedURL = url else {return}
         
         let session = URLSession.shared
         let task = session.dataTask(with: unwrappedURL) { (data, response, error) in
-            debugPrint("Start")
             guard let unwrappedData = data else {return}
             do {
                 let responseJSON = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as? JSON ?? ["":""]
-                debugPrint(responseJSON["explanation"]!)
+                debugPrint(responseJSON["explanation"] ?? "")
                 completion(responseJSON)
-                debugPrint("got data")
             } catch {
                 debugPrint(error)
             }

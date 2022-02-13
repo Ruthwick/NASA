@@ -12,7 +12,7 @@ class PicOfTheDay {
     
     var date: String
     var explanation: String
-    var title: String
+    var title: String 
     var image: UIImage?
     
     init(_ data: [String: String],_ image:UIImage) {

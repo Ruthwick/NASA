@@ -10,6 +10,15 @@ import UIKit
 
 extension ViewController{
     func setupView(){
+        //Retry button setup
+        self.retryBtn.isHidden = true
+        self.retryBtn.layer.cornerRadius = 2
+        if #available(iOS 13.0, *) {
+            self.retryBtn.layer.borderColor = UIColor.label.cgColor
+        } else {
+            self.retryBtn.layer.borderColor = UIColor.black.cgColor
+        }
+        self.retryBtn.layer.borderWidth = 2
         //Configure NavigationBar
         if self.traitCollection.userInterfaceStyle == .dark {
             // User Interface is Dark

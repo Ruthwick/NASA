@@ -17,6 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWh-Ka-yBP">
+                                <rect key="frame" x="130" y="414.5" width="154" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="154" id="IKv-Xh-Fuc"/>
+                                    <constraint firstAttribute="height" constant="67" id="p3e-VD-Lo0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Retry?">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="retryClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dar-Fa-ewe"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lnC-xX-3us">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -75,12 +90,14 @@
                             <constraint firstItem="0kB-7W-gTJ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="1QF-6Q-Z4v"/>
                             <constraint firstItem="lnC-xX-3us" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7gr-xq-BRq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0kB-7W-gTJ" secondAttribute="trailing" id="7y5-Je-D3C"/>
+                            <constraint firstItem="rWh-Ka-yBP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CZi-Us-Gdc"/>
                             <constraint firstItem="0kB-7W-gTJ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="L4L-LH-yr4"/>
                             <constraint firstItem="0kB-7W-gTJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W6J-Is-KkB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lnC-xX-3us" secondAttribute="trailing" id="Wis-H8-aML"/>
                             <constraint firstItem="lnC-xX-3us" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aEn-zh-496"/>
                             <constraint firstItem="0kB-7W-gTJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="alB-M4-Nnt"/>
                             <constraint firstItem="0kB-7W-gTJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="exe-ms-1h8"/>
+                            <constraint firstItem="rWh-Ka-yBP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p9I-DB-xVq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lnC-xX-3us" secondAttribute="bottom" id="xAv-M2-fZi"/>
                         </constraints>
                     </view>
@@ -91,6 +108,7 @@
                         <outlet property="datePicker" destination="0fh-oD-cDw" id="fjB-ON-CYr"/>
                         <outlet property="picOfTheDayView" destination="lnC-xX-3us" id="IVy-7v-OFr"/>
                         <outlet property="pickerView" destination="0kB-7W-gTJ" id="2F6-qZ-W2D"/>
+                        <outlet property="retryBtn" destination="rWh-Ka-yBP" id="4QO-iF-Ely"/>
                         <segue destination="BeO-D6-lco" kind="show" identifier="fav" id="Oh6-Wx-SNH"/>
                     </connections>
                 </viewController>
