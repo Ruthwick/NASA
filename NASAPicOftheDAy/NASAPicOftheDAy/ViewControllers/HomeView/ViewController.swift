@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,FavUpdateDelegate {
     @IBOutlet var picOfTheDayView: UITableView!
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var pickerView: UIView!
@@ -110,5 +110,17 @@ class ViewController: UIViewController {
         self.getPicOfTheDay(today)
     }
     
+    // Setup store data for favview
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "fav") {
+            let vc = segue.destination as! FavViewController
+            vc.delegate = self
+        }
+    }
+    
+    //Extension of fav delegate
+    func reloadMainPage() {
+        self.picOfTheDayView.reloadData()
+    }
     
 }

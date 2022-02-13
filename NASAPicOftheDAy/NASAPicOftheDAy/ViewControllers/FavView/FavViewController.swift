@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol FavUpdateDelegate{
+    func reloadMainPage()
+}
+
+
 class FavViewController: UIViewController {
     @IBOutlet var favListTable: UITableView!
     @IBOutlet var emptyFavLbl: UILabel!
     var favList = [PicOfTheDay]()
+    var delegate : FavUpdateDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,6 +106,7 @@ extension FavViewController: UITableViewDelegate,UITableViewDataSource{
             favArray.remove(at: sender.tag)
             FavJSONManager().saveData(favArray)
             self.loadFavList()
+            self.delegate?.reloadMainPage()
         })
     }
     
