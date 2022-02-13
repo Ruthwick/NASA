@@ -24,7 +24,6 @@
 		ECABA1B027B8C9A100B4BCFD /* FavTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA1AE27B8C9A100B4BCFD /* FavTableViewCell.swift */; };
 		ECABA1B127B8C9A100B4BCFD /* FavTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECABA1AF27B8C9A100B4BCFD /* FavTableViewCell.xib */; };
 		ECABA1B327B8CF5500B4BCFD /* UIDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA1B227B8CF5500B4BCFD /* UIDate+Extension.swift */; };
-		ECABA1B727B8E10800B4BCFD /* FavList.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECABA1B627B8E10800B4BCFD /* FavList.plist */; };
 		ECABA1B927B8E1B500B4BCFD /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA1B827B8E1B500B4BCFD /* JSONManager.swift */; };
 		ECABA1BC27B8F33D00B4BCFD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA1BB27B8F33D00B4BCFD /* Reachability.swift */; };
 /* End PBXBuildFile section */
@@ -49,7 +48,6 @@
 		ECABA1AE27B8C9A100B4BCFD /* FavTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavTableViewCell.swift; sourceTree = "<group>"; };
 		ECABA1AF27B8C9A100B4BCFD /* FavTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavTableViewCell.xib; sourceTree = "<group>"; };
 		ECABA1B227B8CF5500B4BCFD /* UIDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDate+Extension.swift"; sourceTree = "<group>"; };
-		ECABA1B627B8E10800B4BCFD /* FavList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FavList.plist; sourceTree = "<group>"; };
 		ECABA1B827B8E1B500B4BCFD /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		ECABA1BB27B8F33D00B4BCFD /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,7 +115,6 @@
 			children = (
 				ECABA18227B8055100B4BCFD /* Assets.xcassets */,
 				ECABA18727B8055100B4BCFD /* Info.plist */,
-				ECABA1B627B8E10800B4BCFD /* FavList.plist */,
 			);
 			path = "Assetsa and plist";
 			sourceTree = "<group>";
@@ -259,7 +256,6 @@
 				ECABA18627B8055100B4BCFD /* LaunchScreen.storyboard in Resources */,
 				ECABA1B127B8C9A100B4BCFD /* FavTableViewCell.xib in Resources */,
 				ECABA18327B8055100B4BCFD /* Assets.xcassets in Resources */,
-				ECABA1B727B8E10800B4BCFD /* FavList.plist in Resources */,
 				ECABA18127B8054F00B4BCFD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
