@@ -23,6 +23,7 @@
 		ECABA1AC27B8C81E00B4BCFD /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA1AB27B8C81E00B4BCFD /* FavViewController.swift */; };
 		ECABA1B027B8C9A100B4BCFD /* FavTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA1AE27B8C9A100B4BCFD /* FavTableViewCell.swift */; };
 		ECABA1B127B8C9A100B4BCFD /* FavTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECABA1AF27B8C9A100B4BCFD /* FavTableViewCell.xib */; };
+		ECABA1B327B8CF5500B4BCFD /* UIDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA1B227B8CF5500B4BCFD /* UIDate+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		ECABA1AB27B8C81E00B4BCFD /* FavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavViewController.swift; sourceTree = "<group>"; };
 		ECABA1AE27B8C9A100B4BCFD /* FavTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavTableViewCell.swift; sourceTree = "<group>"; };
 		ECABA1AF27B8C9A100B4BCFD /* FavTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavTableViewCell.xib; sourceTree = "<group>"; };
+		ECABA1B227B8CF5500B4BCFD /* UIDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDate+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				ECABA19927B80F4C00B4BCFD /* UIViewController+Extension.swift */,
 				ECABA1A127B8B1C800B4BCFD /* UILable+Extension.swift */,
 				ECABA1A527B8B76800B4BCFD /* LoadingView.swift */,
+				ECABA1B227B8CF5500B4BCFD /* UIDate+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECABA1B027B8C9A100B4BCFD /* FavTableViewCell.swift in Sources */,
+				ECABA1B327B8CF5500B4BCFD /* UIDate+Extension.swift in Sources */,
 				ECABA19227B8079200B4BCFD /* PicOfTheDay.swift in Sources */,
 				ECABA1A227B8B1C800B4BCFD /* UILable+Extension.swift in Sources */,
 				ECABA17E27B8054F00B4BCFD /* ViewController.swift in Sources */,

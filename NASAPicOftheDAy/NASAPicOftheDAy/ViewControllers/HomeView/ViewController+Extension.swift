@@ -34,6 +34,9 @@ extension ViewController{
         self.picOfTheDayView.estimatedRowHeight = UITableView.automaticDimension
         // cell intialisation
         self.registerTableViewCells()
+        
+        //DatePicker setup 
+        self.datePicker.maximumDate = Date()
     }
     
     private func registerTableViewCells() {
@@ -46,6 +49,7 @@ extension ViewController{
     
     @objc func didTapSearchButton(sender: AnyObject){
         debugPrint("Search Clicked")
+        self.pickerView.isHidden = false
     }
     
     @objc func didTapfavButton(sender: AnyObject){
@@ -60,10 +64,13 @@ extension ViewController{
             // User Interface is Dark
             self.navigationController?.navigationBar.tintColor = .white
         } else {
-            // User Interface is Light 
+            // User Interface is Light
             self.navigationController?.navigationBar.tintColor = .black
         }
     }
+    
+    
+    
     
 }
 // Mark: Set table view properties
@@ -83,11 +90,17 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
         cell.imageTitle.text =  self.picOfTheDayDetails?.title
         cell.imageExplanation.text =  self.picOfTheDayDetails?.explanation
         cell.mainHolderViewHeight.constant = cell.imageExplanation.optimalHeight + 350
+        cell.favButton.addTarget(self, action: #selector(favPic(sender:)), for: .touchUpInside)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    @objc func favPic(sender: UIButton){
+       
+        
     }
     
 }

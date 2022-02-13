@@ -9,21 +9,33 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet var picOfTheDayView: UITableView!
+    @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet var pickerView: UIView!
+    
     var picOfTheDayDetails : PicOfTheDay?
     let loader = LoadingView()
+    let toolbar = UIToolbar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.loader.add(withText: "Loading...", into: self.view)
         self.setupView()
-        self.getPicOfTheDay("2022-02-12")
+        let today = Date().string(format: "YYYY-MM-dd")
+        self.getPicOfTheDay(today)
     }
     
     func getPicOfTheDay(_ date:String){
         
         NASAAPIClient.getDataFromAPI(at: date) { (response) in
-            NASAAPIClient.downloadImage(at: response["url"]!, completion: { (success, image) in
+            guard let imageUrl = response["url"] else {
+                print ("Error getting image url")
+                self.loader.dismissLoadingView()
+                self.showAlert(title: "Error", message: "Something went wrong please try again later!", style: .alert)
+                return
+            }
+            
+            NASAAPIClient.downloadImage(at: imageUrl, completion: { (success, image) in
                 
                 if success == true {
                     print("got image data from URL")
@@ -44,4 +56,15 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func doneTapped(_ sender: UIButton) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "YYYY-MM-dd"
+        self.loader.add(withText: "Loading...", into: self.view)
+        self.getPicOfTheDay(datePicker.date.string(format: "YYYY-MM-dd"))
+        self.pickerView.isHidden = true
+    }
+    
+    @IBAction func cancelTapped(_ sender: UIButton) {
+        self.pickerView.isHidden = true
+    }
 }

@@ -23,7 +23,7 @@ class NASAAPIClient {
             debugPrint("Start")
             guard let unwrappedData = data else {return}
             do {
-                let responseJSON = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! JSON
+                let responseJSON = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as? JSON ?? ["":""]
                 debugPrint(responseJSON["explanation"]!)
                 completion(responseJSON)
                 debugPrint("got data")
