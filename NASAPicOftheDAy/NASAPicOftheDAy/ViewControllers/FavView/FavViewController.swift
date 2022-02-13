@@ -102,7 +102,7 @@ extension FavViewController: UITableViewDelegate,UITableViewDataSource{
 
     @objc func removeFav(sender: UIButton){
         var favArray = FavJSONManager().retriveArray()
-        self.showRemovePrompt(title:"Remove?" , message: "Do you want to remove this picture from favourties.", completion: { _ in
+        self.showRemovePrompt(title:"Remove?" , message: "Do you want to remove this picture from favourites?", completion: { _ in
             debugPrint("Remove")
             favArray.remove(at: sender.tag)
             FavJSONManager().saveData(favArray)

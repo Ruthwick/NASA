@@ -138,7 +138,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
     @objc func favPic(sender: UIButton){
         var favArray = FavJSONManager().retriveArray()
         if favArray.contains(where: {$0.date == self.picOfTheDayDetails?.date}){
-            self.showRemovePrompt(title:"Remove?" , message: "Do you want to remove this picture from favourties.", completion: { _ in
+            self.showRemovePrompt(title:"Remove?" , message: "Do you want to remove this picture from favourites?", completion: { _ in
                 debugPrint("Remove")
                 let index = favArray.firstIndex(where:{$0.date == self.picOfTheDayDetails?.date})
                 favArray.remove(at: index ?? 0)
