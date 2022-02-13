@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class NASAAPIClient {
-    typealias JSON = [String :  String]
+    typealias JSON = [String : String]
     
     
     // Call this API to get data

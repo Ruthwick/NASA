@@ -17,6 +17,8 @@
 		ECABA19A27B80F4C00B4BCFD /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA19927B80F4C00B4BCFD /* UIViewController+Extension.swift */; };
 		ECABA19F27B8121300B4BCFD /* PicOfTheDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA19D27B8121300B4BCFD /* PicOfTheDayCell.swift */; };
 		ECABA1A027B8121300B4BCFD /* PicOfTheDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECABA19E27B8121300B4BCFD /* PicOfTheDayCell.xib */; };
+		ECABA1A227B8B1C800B4BCFD /* UILable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA1A127B8B1C800B4BCFD /* UILable+Extension.swift */; };
+		ECABA1A627B8B76800B4BCFD /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA1A527B8B76800B4BCFD /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		ECABA19927B80F4C00B4BCFD /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		ECABA19D27B8121300B4BCFD /* PicOfTheDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfTheDayCell.swift; sourceTree = "<group>"; };
 		ECABA19E27B8121300B4BCFD /* PicOfTheDayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicOfTheDayCell.xib; sourceTree = "<group>"; };
+		ECABA1A127B8B1C800B4BCFD /* UILable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILable+Extension.swift"; sourceTree = "<group>"; };
+		ECABA1A527B8B76800B4BCFD /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				ECABA19927B80F4C00B4BCFD /* UIViewController+Extension.swift */,
+				ECABA1A127B8B1C800B4BCFD /* UILable+Extension.swift */,
+				ECABA1A527B8B76800B4BCFD /* LoadingView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -216,9 +222,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECABA19227B8079200B4BCFD /* PicOfTheDay.swift in Sources */,
+				ECABA1A227B8B1C800B4BCFD /* UILable+Extension.swift in Sources */,
 				ECABA17E27B8054F00B4BCFD /* ViewController.swift in Sources */,
 				ECABA19527B80D9400B4BCFD /* NASAAPIClient.swift in Sources */,
 				ECABA19A27B80F4C00B4BCFD /* UIViewController+Extension.swift in Sources */,
+				ECABA1A627B8B76800B4BCFD /* LoadingView.swift in Sources */,
 				ECABA19F27B8121300B4BCFD /* PicOfTheDayCell.swift in Sources */,
 				ECABA17A27B8054F00B4BCFD /* AppDelegate.swift in Sources */,
 			);

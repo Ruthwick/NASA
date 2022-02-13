@@ -15,7 +15,8 @@ class PicOfTheDay {
     var title: String
     var image: UIImage?
     
-    init(data: [String: String]) {
+    init(_ data: [String: String],_ image:UIImage) {
+        self.image = image
         self.date = data["date"]!
         self.explanation = data["explanation"]!
         self.title = data["title"]!
