@@ -24,9 +24,8 @@ import UIKit
         }
         loadingView.backgroundColor = UIColor.clear
         loadingView.alpha = 0.2
-
         activityView = UIActivityIndicatorView(style: .whiteLarge)
-
+        
         let supperViewX = ((supperView?.frame.size.width ?? 0.0) - (activityView?.frame.size.width ?? 0.0)) / 2
         let supperViewY = (((supperView?.frame.size.height ?? 0.0) - (activityView?.frame.size.height ?? 0.0)) / 2) - 30
 

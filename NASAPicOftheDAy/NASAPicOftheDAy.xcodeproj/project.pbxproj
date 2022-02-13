@@ -19,6 +19,10 @@
 		ECABA1A027B8121300B4BCFD /* PicOfTheDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECABA19E27B8121300B4BCFD /* PicOfTheDayCell.xib */; };
 		ECABA1A227B8B1C800B4BCFD /* UILable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA1A127B8B1C800B4BCFD /* UILable+Extension.swift */; };
 		ECABA1A627B8B76800B4BCFD /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA1A527B8B76800B4BCFD /* LoadingView.swift */; };
+		ECABA1A927B8C43000B4BCFD /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA1A827B8C43000B4BCFD /* ViewController+Extension.swift */; };
+		ECABA1AC27B8C81E00B4BCFD /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA1AB27B8C81E00B4BCFD /* FavViewController.swift */; };
+		ECABA1B027B8C9A100B4BCFD /* FavTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABA1AE27B8C9A100B4BCFD /* FavTableViewCell.swift */; };
+		ECABA1B127B8C9A100B4BCFD /* FavTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECABA1AF27B8C9A100B4BCFD /* FavTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		ECABA19E27B8121300B4BCFD /* PicOfTheDayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicOfTheDayCell.xib; sourceTree = "<group>"; };
 		ECABA1A127B8B1C800B4BCFD /* UILable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILable+Extension.swift"; sourceTree = "<group>"; };
 		ECABA1A527B8B76800B4BCFD /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		ECABA1A827B8C43000B4BCFD /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
+		ECABA1AB27B8C81E00B4BCFD /* FavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavViewController.swift; sourceTree = "<group>"; };
+		ECABA1AE27B8C9A100B4BCFD /* FavTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavTableViewCell.swift; sourceTree = "<group>"; };
+		ECABA1AF27B8C9A100B4BCFD /* FavTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +115,9 @@
 		ECABA19027B805D500B4BCFD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				ECABA19C27B811F400B4BCFD /* TableViewCell */,
+				ECABA1AA27B8C7DA00B4BCFD /* FavView */,
+				ECABA1A727B8C3FB00B4BCFD /* HomeView */,
 				ECABA17927B8054F00B4BCFD /* AppDelegate.swift */,
-				ECABA17D27B8054F00B4BCFD /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -147,6 +155,34 @@
 				ECABA19E27B8121300B4BCFD /* PicOfTheDayCell.xib */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		ECABA1A727B8C3FB00B4BCFD /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				ECABA19C27B811F400B4BCFD /* TableViewCell */,
+				ECABA17D27B8054F00B4BCFD /* ViewController.swift */,
+				ECABA1A827B8C43000B4BCFD /* ViewController+Extension.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		ECABA1AA27B8C7DA00B4BCFD /* FavView */ = {
+			isa = PBXGroup;
+			children = (
+				ECABA1AD27B8C97900B4BCFD /* FavCell */,
+				ECABA1AB27B8C81E00B4BCFD /* FavViewController.swift */,
+			);
+			path = FavView;
+			sourceTree = "<group>";
+		};
+		ECABA1AD27B8C97900B4BCFD /* FavCell */ = {
+			isa = PBXGroup;
+			children = (
+				ECABA1AE27B8C9A100B4BCFD /* FavTableViewCell.swift */,
+				ECABA1AF27B8C9A100B4BCFD /* FavTableViewCell.xib */,
+			);
+			path = FavCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +245,7 @@
 			files = (
 				ECABA1A027B8121300B4BCFD /* PicOfTheDayCell.xib in Resources */,
 				ECABA18627B8055100B4BCFD /* LaunchScreen.storyboard in Resources */,
+				ECABA1B127B8C9A100B4BCFD /* FavTableViewCell.xib in Resources */,
 				ECABA18327B8055100B4BCFD /* Assets.xcassets in Resources */,
 				ECABA18127B8054F00B4BCFD /* Main.storyboard in Resources */,
 			);
@@ -221,13 +258,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECABA1B027B8C9A100B4BCFD /* FavTableViewCell.swift in Sources */,
 				ECABA19227B8079200B4BCFD /* PicOfTheDay.swift in Sources */,
 				ECABA1A227B8B1C800B4BCFD /* UILable+Extension.swift in Sources */,
 				ECABA17E27B8054F00B4BCFD /* ViewController.swift in Sources */,
 				ECABA19527B80D9400B4BCFD /* NASAAPIClient.swift in Sources */,
 				ECABA19A27B80F4C00B4BCFD /* UIViewController+Extension.swift in Sources */,
+				ECABA1A927B8C43000B4BCFD /* ViewController+Extension.swift in Sources */,
 				ECABA1A627B8B76800B4BCFD /* LoadingView.swift in Sources */,
 				ECABA19F27B8121300B4BCFD /* PicOfTheDayCell.swift in Sources */,
+				ECABA1AC27B8C81E00B4BCFD /* FavViewController.swift in Sources */,
 				ECABA17A27B8054F00B4BCFD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,7 +345,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -360,7 +400,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

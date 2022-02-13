@@ -1,30 +1,23 @@
 //
-//  ViewController.swift
+//  ViewController+Extension.swift
 //  NASAPicOftheDAy
 //
-//  Created by Ruthwick S Rai on 12/02/22.
+//  Created by Ruthwick S Rai on 13/02/22.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController {
-    @IBOutlet var picOfTheDayView: UITableView!
-    var picOfTheDayDetails : PicOfTheDay?
-    let loader = LoadingView()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.loader.add(withText: "Loading...", into: self.view)
-        self.setupView()
-        self.getPicOfTheDay("2022-02-12")
-    }
-    
+extension ViewController{
     func setupView(){
         //Configure NavigationBar
-        self.navigationController?.title = "Pic Of The Day"
-        self.navigationController?.navigationBar.backgroundColor = .white
-        self.navigationController?.navigationBar.tintColor = .black
+        if self.traitCollection.userInterfaceStyle == .dark {
+            // User Interface is Dark
+            self.navigationController?.navigationBar.tintColor = .white
+        } else {
+            // User Interface is Light
+            self.navigationController?.navigationBar.tintColor = .black
+        }
         let searchImage    = UIImage.init(named: "icons8-search-50")
         let heartImg  = UIImage.init(named: "icons8-heart-50")
         
@@ -57,34 +50,22 @@ class ViewController: UIViewController {
     
     @objc func didTapfavButton(sender: AnyObject){
         debugPrint("Fav Clicked")
+        self.performSegue(withIdentifier: "fav", sender: nil)
     }
     
-    
-    func getPicOfTheDay(_ date:String){
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+           // Trait collection has already changed
         
-        NASAAPIClient.getDataFromAPI(at: date) { (response) in
-            NASAAPIClient.downloadImage(at: response["url"]!, completion: { (success, image) in
-                
-                if success == true {
-                    print("got image data from URL")
-                    DispatchQueue.main.async {
-                        self.picOfTheDayDetails = PicOfTheDay.init(response,image ?? UIImage.init())
-                        self.picOfTheDayView.reloadData()
-                        self.loader.dismissLoadingView()
-                        self.picOfTheDayView.isHidden = false
-                    }
-                    
-                } else {
-                    print ("Error getting image")
-                    self.loader.dismissLoadingView()
-                    self.showAlert(title: "Error", message: "Something went wrong please try again later!", style: .alert)
-                }
-            })
+        if self.traitCollection.userInterfaceStyle == .dark {
+            // User Interface is Dark
+            self.navigationController?.navigationBar.tintColor = .white
+        } else {
+            // User Interface is Light 
+            self.navigationController?.navigationBar.tintColor = .black
         }
-        
     }
+    
 }
-
 // Mark: Set table view properties
 extension ViewController: UITableViewDelegate,UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
