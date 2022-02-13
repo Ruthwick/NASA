@@ -5,7 +5,7 @@
 //  Created by Ruthwick S Rai on 13/02/22.
 //
 
-import UIKit
+import UIKit 
 
 protocol FavUpdateDelegate{
     func reloadMainPage()
@@ -80,6 +80,7 @@ extension FavViewController: UITableViewDelegate,UITableViewDataSource{
             cell.webView.load(youtubeRequest)
         }
         cell.removeBtn.tag = indexPath.row
+        cell.explantionLbl.text = favItems.explanation
         cell.removeBtn.addTarget(self, action: #selector(removeFav(sender:)), for: .touchUpInside)
         return cell
     }
@@ -97,8 +98,8 @@ extension FavViewController: UITableViewDelegate,UITableViewDataSource{
         navContoller.modalPresentationStyle = .fullScreen
         self.present(navContoller, animated: true, completion: nil)
     }
-    
-    
+     
+
     @objc func removeFav(sender: UIButton){
         var favArray = FavJSONManager().retriveArray()
         self.showRemovePrompt(title:"Remove?" , message: "Do you want to remove this picture from favourties.", completion: { _ in
@@ -109,6 +110,7 @@ extension FavViewController: UITableViewDelegate,UITableViewDataSource{
             self.delegate?.reloadMainPage()
         })
     }
+    
     
     
 }

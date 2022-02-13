@@ -106,11 +106,11 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
         cell.dateLabel.text =  self.picOfTheDayDetails?.date
         cell.imageTitle.text =  self.picOfTheDayDetails?.title
         cell.imageExplanation.text =  self.picOfTheDayDetails?.explanation
-        cell.mainHolderViewHeight.constant = cell.imageExplanation.optimalHeight + 350
+        cell.mainHolderViewHeight.constant = cell.imageExplanation.optimalHeight + 250
         if (!(self.picOfTheDayDetails?.title.isEmpty ?? true)) && FavJSONManager().retriveArray().contains(where: {$0.date == self.picOfTheDayDetails?.date}){
-            cell.heartIcon.image = UIImage.init(named: "like-of-filled-heart")
+            cell.favButton.setImage(UIImage.init(named: "like-of-filled-heart"), for: .normal)
         }else {
-            cell.heartIcon.image = UIImage.init(named: "icons8-heart-50")
+            cell.favButton.setImage(UIImage.init(named:"icons8-heart-50"), for: .normal)
         }
         cell.favButton.addTarget(self, action: #selector(favPic(sender:)), for: .touchUpInside)
         return cell
@@ -118,6 +118,21 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let holderView = UIView.init(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30))
+        let labelView = UILabel.init(frame: CGRect(x: 0, y: 5, width: tableView.frame.width, height: 20))
+        labelView.text = Date().dayDifference(self.picOfTheDayDetails?.date ?? "")
+        labelView.textAlignment = .center
+        holderView.addSubview(labelView)
+        labelView.clipsToBounds = true
+        holderView.clipsToBounds = true
+        return holderView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
     }
     
     @objc func favPic(sender: UIButton){

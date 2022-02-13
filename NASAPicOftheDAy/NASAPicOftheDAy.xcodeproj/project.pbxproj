@@ -50,6 +50,7 @@
 		ECABA1B227B8CF5500B4BCFD /* UIDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDate+Extension.swift"; sourceTree = "<group>"; };
 		ECABA1B827B8E1B500B4BCFD /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		ECABA1BB27B8F33D00B4BCFD /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		ECABA1BD27B9105B00B4BCFD /* NASAPicOftheDAy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NASAPicOftheDAy.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 		ECABA17827B8054F00B4BCFD /* NASAPicOftheDAy */ = {
 			isa = PBXGroup;
 			children = (
+				ECABA1BD27B9105B00B4BCFD /* NASAPicOftheDAy.entitlements */,
 				ECABA19B27B8118900B4BCFD /* API */,
 				ECABA18E27B805A900B4BCFD /* Assets and other files */,
 				ECABA19827B80F2F00B4BCFD /* Helpers */,
@@ -427,6 +429,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NASAPicOftheDAy/NASAPicOftheDAy.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -457,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NASAPicOftheDAy/NASAPicOftheDAy.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";

@@ -25,7 +25,7 @@ class ViewController: UIViewController,FavUpdateDelegate {
         let today = Date().string(format: "YYYY-MM-dd")
         if self.picOfTheDayDetails == nil{
             self.getPicOfTheDay(today)
-        }else {
+        }else { 
             self.picOfTheDayView.reloadData()
             self.picOfTheDayView.isHidden = false
         }

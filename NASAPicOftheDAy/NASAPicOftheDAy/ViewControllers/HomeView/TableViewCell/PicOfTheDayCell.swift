@@ -9,7 +9,6 @@ import UIKit
 import WebKit
 
 class PicOfTheDayCell: UITableViewCell {
-    @IBOutlet var heartIcon: UIImageView!
     @IBOutlet var webView: WKWebView!
     @IBOutlet var mainHolderView: UIView!
     @IBOutlet var mainHolderViewHeight: NSLayoutConstraint!
@@ -17,7 +16,6 @@ class PicOfTheDayCell: UITableViewCell {
     @IBOutlet weak var imageTitle: UILabel!
     @IBOutlet weak var imageExplanation: UILabel!
     @IBOutlet weak var picOfTheDay: UIImageView!
-    @IBOutlet var favView: UIView!
     @IBOutlet var favButton: UIButton!
     
     
@@ -25,16 +23,16 @@ class PicOfTheDayCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.webView.isHidden = true
+        self.webView.stopLoading()
         self.mainHolderView.layer.cornerRadius = 10
         self.mainHolderView.layer.borderWidth = 2
-        self.favView.layer.cornerRadius = 10
         if self.traitCollection.userInterfaceStyle == .dark {
             // User Interface is Dark
-            self.heartIcon.tintColor = .white
+            self.favButton.tintColor = .white
             self.mainHolderView.layer.borderColor = UIColor.white.cgColor
         } else {
             // User Interface is Light
-            self.heartIcon.tintColor = .black
+            self.favButton.tintColor = .black
             self.mainHolderView.layer.borderColor = UIColor.black.cgColor
         }
     } 
@@ -44,11 +42,11 @@ class PicOfTheDayCell: UITableViewCell {
         
         if self.traitCollection.userInterfaceStyle == .dark {
             // User Interface is Dark
-            self.heartIcon.tintColor = .white
+            self.favButton.tintColor = .white
             self.mainHolderView.layer.borderColor = UIColor.white.cgColor
         } else {
             // User Interface is Light
-            self.heartIcon.tintColor = .black
+            self.favButton.tintColor = .black
             self.mainHolderView.layer.borderColor = UIColor.black.cgColor
         }
     }

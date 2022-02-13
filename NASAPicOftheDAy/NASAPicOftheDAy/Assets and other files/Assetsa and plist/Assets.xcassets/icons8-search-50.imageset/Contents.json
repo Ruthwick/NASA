@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "search-interface-symbol (2).png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,7 @@
       "scale" : "2x"
     },
     {
-      "filename" : "search (1).png",
+      "filename" : "search-interface-symbol (1).png",
       "idiom" : "universal",
       "scale" : "3x"
     }
