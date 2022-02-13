@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import WebKit
 
 class FavTableViewCell: UITableViewCell {
     @IBOutlet var mainView: UIView!
     @IBOutlet var favImage: UIImageView!
     @IBOutlet var favTitle: UILabel!
     @IBOutlet var removeBtn: UIButton!
+    @IBOutlet var webView: WKWebView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,11 +24,13 @@ class FavTableViewCell: UITableViewCell {
             // User Interface is Light
             self.mainView.layer.borderColor = UIColor.black.cgColor
         }
+        self.favImage.layer.cornerRadius = 2
         self.mainView.layer.borderWidth = 1
         self.mainView.layer.cornerRadius = 5
         self.removeBtn.layer.cornerRadius = 2
         self.removeBtn.layer.borderWidth = 1
-        self.removeBtn.layer.borderColor = UIColor.blue.cgColor
+        self.removeBtn.layer.borderColor = UIColor.systemRed.cgColor
+        self.webView.isUserInteractionEnabled = false
         // Initialization code
     }
     

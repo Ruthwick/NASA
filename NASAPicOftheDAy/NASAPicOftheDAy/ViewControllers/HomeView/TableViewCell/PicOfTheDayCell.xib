@@ -27,6 +27,14 @@
                                     <constraint firstAttribute="height" constant="150" id="H5l-FI-J1W"/>
                                 </constraints>
                             </imageView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSZ-Jh-1FO">
+                                <rect key="frame" x="0.0" y="0.0" width="436" height="150"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Uef-Ba-Msf">
                                 <rect key="frame" x="10" y="158" width="416" height="30"/>
                                 <constraints>
@@ -97,6 +105,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="PSZ-Jh-1FO" firstAttribute="leading" secondItem="dK4-6o-sI7" secondAttribute="leading" id="D2p-bi-k2c"/>
                             <constraint firstItem="Uef-Ba-Msf" firstAttribute="leading" secondItem="dK4-6o-sI7" secondAttribute="leading" constant="10" id="G6Z-lG-vXn"/>
                             <constraint firstItem="Uef-Ba-Msf" firstAttribute="top" secondItem="dK4-6o-sI7" secondAttribute="bottom" constant="8" symbolic="YES" id="GXB-ok-yVw"/>
                             <constraint firstItem="dK4-6o-sI7" firstAttribute="top" secondItem="NND-nk-jr7" secondAttribute="top" id="HVS-sg-ekk"/>
@@ -104,12 +113,15 @@
                             <constraint firstAttribute="bottom" secondItem="vH0-GL-pBt" secondAttribute="bottom" constant="27" id="I2G-dw-Eku"/>
                             <constraint firstItem="dK4-6o-sI7" firstAttribute="leading" secondItem="NND-nk-jr7" secondAttribute="leading" id="OnB-jQ-9Yi"/>
                             <constraint firstItem="BFe-yn-ugp" firstAttribute="top" secondItem="zrD-7j-Wdj" secondAttribute="bottom" constant="24" id="Rh7-iD-Rej"/>
+                            <constraint firstItem="PSZ-Jh-1FO" firstAttribute="bottom" secondItem="dK4-6o-sI7" secondAttribute="bottom" id="SK1-O7-EnN"/>
                             <constraint firstItem="zrD-7j-Wdj" firstAttribute="leading" secondItem="Uef-Ba-Msf" secondAttribute="leading" id="axZ-FY-fhS"/>
                             <constraint firstItem="vH0-GL-pBt" firstAttribute="top" secondItem="BFe-yn-ugp" secondAttribute="bottom" constant="25.5" id="byd-18-mGd"/>
                             <constraint firstItem="zrD-7j-Wdj" firstAttribute="top" secondItem="Uef-Ba-Msf" secondAttribute="bottom" constant="4" id="exc-sm-Q4h"/>
+                            <constraint firstItem="PSZ-Jh-1FO" firstAttribute="top" secondItem="dK4-6o-sI7" secondAttribute="top" id="gHe-MM-s6o"/>
                             <constraint firstItem="BFe-yn-ugp" firstAttribute="trailing" secondItem="zrD-7j-Wdj" secondAttribute="trailing" id="hKl-yC-ERa"/>
                             <constraint firstItem="vH0-GL-pBt" firstAttribute="centerX" secondItem="dK4-6o-sI7" secondAttribute="centerX" id="joj-dW-YrS"/>
                             <constraint firstAttribute="trailing" secondItem="dK4-6o-sI7" secondAttribute="trailing" id="mMl-M5-rZz"/>
+                            <constraint firstItem="PSZ-Jh-1FO" firstAttribute="trailing" secondItem="dK4-6o-sI7" secondAttribute="trailing" id="mQe-dg-TkG"/>
                             <constraint firstItem="BFe-yn-ugp" firstAttribute="leading" secondItem="zrD-7j-Wdj" secondAttribute="leading" id="o0o-2v-udP"/>
                             <constraint firstItem="zrD-7j-Wdj" firstAttribute="trailing" secondItem="Uef-Ba-Msf" secondAttribute="trailing" id="tDa-xt-SnQ"/>
                             <constraint firstItem="Uef-Ba-Msf" firstAttribute="trailing" secondItem="dK4-6o-sI7" secondAttribute="trailing" constant="-10" id="zpQ-z0-tYt"/>
@@ -134,6 +146,7 @@
                 <outlet property="mainHolderView" destination="NND-nk-jr7" id="9kC-Xm-aJl"/>
                 <outlet property="mainHolderViewHeight" destination="HfR-f3-oSc" id="oH9-TD-I69"/>
                 <outlet property="picOfTheDay" destination="dK4-6o-sI7" id="KHo-ta-Lpo"/>
+                <outlet property="webView" destination="PSZ-Jh-1FO" id="72t-Xi-ubg"/>
             </connections>
             <point key="canvasLocation" x="250.72463768115944" y="231.36160714285714"/>
         </tableViewCell>

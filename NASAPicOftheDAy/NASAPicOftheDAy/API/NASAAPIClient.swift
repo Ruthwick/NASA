@@ -19,6 +19,8 @@ class NASAAPIClient {
         guard let unwrappedURL = url else {return}
         
         let session = URLSession.shared
+        session.configuration.timeoutIntervalForRequest = 60 //timeout after 60 sec of request
+        session.configuration.timeoutIntervalForResource = 60 //timeout after 60 sec of no response
         let task = session.dataTask(with: unwrappedURL) { (data, response, error) in
             guard let unwrappedData = data else {return}
             do {
@@ -27,6 +29,7 @@ class NASAAPIClient {
                 completion(responseJSON)
             } catch {
                 debugPrint(error)
+                completion(["":""])
             }
         }
         task.resume()
@@ -39,6 +42,8 @@ class NASAAPIClient {
         guard let unwrappedURL = url else {return}
         let request = URLRequest(url: unwrappedURL)
         let session = URLSession.shared
+        session.configuration.timeoutIntervalForRequest = 60 //timeout after 60 sec of request
+        session.configuration.timeoutIntervalForResource = 60 //timeout after 60 sec of no response
         let task = session.dataTask(with: request) { data, response, error in
             guard let data = data, let image = UIImage(data: data) else { completion(false, nil); return }
             completion(true, image)

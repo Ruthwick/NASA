@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import WebKit
 
 extension ViewController{
     func setupView(){
@@ -94,11 +95,23 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PicOfTheDayCell", for: indexPath) as! PicOfTheDayCell
-        cell.picOfTheDay.image = self.picOfTheDayDetails?.image
+        cell.picOfTheDay.image = self.picOfTheDayDetails?.image 
+        cell.webView.isHidden = true
+        if self.picOfTheDayDetails?.media_type.lowercased() == "video"{
+            cell.webView.isHidden = false
+            let myURL = URL(string: (self.picOfTheDayDetails?.url ?? ""))
+            let youtubeRequest = URLRequest(url: myURL!)
+            cell.webView.load(youtubeRequest)
+        }
         cell.dateLabel.text =  self.picOfTheDayDetails?.date
         cell.imageTitle.text =  self.picOfTheDayDetails?.title
         cell.imageExplanation.text =  self.picOfTheDayDetails?.explanation
         cell.mainHolderViewHeight.constant = cell.imageExplanation.optimalHeight + 350
+        if (!(self.picOfTheDayDetails?.title.isEmpty ?? true)) && FavJSONManager().retriveArray().contains(where: {$0.date == self.picOfTheDayDetails?.date}){
+            cell.heartIcon.image = UIImage.init(named: "like-of-filled-heart")
+        }else {
+            cell.heartIcon.image = UIImage.init(named: "icons8-heart-50")
+        }
         cell.favButton.addTarget(self, action: #selector(favPic(sender:)), for: .touchUpInside)
         return cell
     }
@@ -108,8 +121,21 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
     }
     
     @objc func favPic(sender: UIButton){
-       
-        
+        var favArray = FavJSONManager().retriveArray()
+        if favArray.contains(where: {$0.date == self.picOfTheDayDetails?.date}){
+            self.showRemovePrompt(title:"Remove?" , message: "Do you want to remove this picture from favourties.", completion: { _ in
+                debugPrint("Remove")
+                let index = favArray.firstIndex(where:{$0.date == self.picOfTheDayDetails?.date})
+                favArray.remove(at: index ?? 0)
+                FavJSONManager().saveData(favArray)
+                self.picOfTheDayView.reloadData()
+            })
+            return
+        }
+        favArray.append(self.picOfTheDayDetails!)
+        FavJSONManager().saveData(favArray)
+        self.showAlert(title: "Favourited!", message: "", style: .alert)
+        self.picOfTheDayView.reloadData()
     }
     
 }

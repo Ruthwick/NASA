@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import WebKit
 
 class PicOfTheDayCell: UITableViewCell {
     @IBOutlet var heartIcon: UIImageView!
+    @IBOutlet var webView: WKWebView!
     @IBOutlet var mainHolderView: UIView!
     @IBOutlet var mainHolderViewHeight: NSLayoutConstraint!
     @IBOutlet weak var dateLabel: UILabel!
@@ -22,6 +24,7 @@ class PicOfTheDayCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.webView.isHidden = true
         self.mainHolderView.layer.cornerRadius = 10
         self.mainHolderView.layer.borderWidth = 2
         self.favView.layer.cornerRadius = 10

@@ -29,25 +29,12 @@ extension UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    func showPrompt(title: String?, message: String?, placeholder: String?, completion: @escaping (String?) -> Void) {
+    func showRemovePrompt(title: String?, message: String?, completion: @escaping (String?) -> Void) {
         let promptController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        promptController.addTextField() { textField in
-            if let placeholder = placeholder {
-                textField.text = placeholder
-            }
+        let okAction = UIAlertAction(title: "Remove?", style: .destructive) { action in
+            completion("")
         }
-        let okAction = UIAlertAction(title: "OK", style: .default) { action in
-            guard
-                let textFields = promptController.textFields,
-                let first = textFields.first,
-                let text = first.text
-                else {
-                    completion(nil)
-                    return
-            }
-            completion(text)
-        }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         promptController.addAction(okAction)
         promptController.addAction(cancelAction)
         self.present(promptController, animated: true, completion: nil)
